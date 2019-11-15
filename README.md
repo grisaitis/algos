@@ -17,3 +17,8 @@ pipenv run pytest -vv --durations=3
 ```
 pipenv run pylint sorting
 ```
+
+### to add...
+
+- ci (travis)
+- coverage (pytest-cov, coveralls)
