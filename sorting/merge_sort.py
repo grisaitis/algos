@@ -17,12 +17,10 @@ def merge_sort(x: list):
 
   if n == 1:
     return x
-  elif n == 2:
+  if n == 2:
     if x[0] > x[1]:
       return x[::-1]  # reverse x
-    else:
-      return x
-  else:
-    midpoint = n // 2
-    x1, x2 = x[0:midpoint], x[midpoint:n]
-    return combine(merge_sort(x1), merge_sort(x2))
+    return x
+  midpoint = n // 2
+  x1, x2 = x[0:midpoint], x[midpoint:n]
+  return combine(merge_sort(x1), merge_sort(x2))
