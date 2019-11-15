@@ -12,3 +12,8 @@ pipenv install
 pipenv run pytest -vv --durations=3
 ```
 
+### lint
+
+```
+pipenv run pylint sorting
+```
