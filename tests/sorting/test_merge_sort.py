@@ -13,3 +13,6 @@ class TestMergeSort:
     random.seed(0)
     random.shuffle(big_thing)
     assert merge_sort(big_thing) == list(range(10000))
+
+  def test_is_stable(self):
+    pass
