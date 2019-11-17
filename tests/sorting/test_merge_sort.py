@@ -1,6 +1,6 @@
 import pytest
 
-from sorting.merge_sort import merge_sort
+from algos.sorting.merge_sort import merge_sort
 from tests.sorting.base import make_random_list_of_ints
 
 

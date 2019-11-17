@@ -1,4 +1,4 @@
-from sorting.insertion_sort import insertion_sort
+from algos.sorting.insertion_sort import insertion_sort
 from tests.sorting.base import make_random_list_of_ints
 
 
