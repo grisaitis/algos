@@ -1,3 +1,5 @@
+import pytest
+
 from sorting.merge_sort import merge_sort
 from tests.sorting.base import make_random_list_of_ints
 
@@ -11,5 +13,6 @@ class TestMergeSort:
     list_of_ints = make_random_list_of_ints(n=10000)
     assert merge_sort(list_of_ints) == list(range(10000))
 
+  @pytest.mark.skip(reason="not implemented")
   def test_is_stable(self):
     pass
