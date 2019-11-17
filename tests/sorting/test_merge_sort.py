@@ -1,18 +1,15 @@
-import random
-
 from sorting.merge_sort import merge_sort
+from tests.sorting.base import make_random_list_of_ints
 
 
 class TestMergeSort:
-  def test_sorts_small_list(self):
-    stuff = [2, 4, 3, 1]
-    assert merge_sort(stuff) == [1, 2, 3, 4]
+  def test_sorts_list_of_length_5(self):
+    list_of_ints = make_random_list_of_ints(n=5)
+    assert merge_sort(list_of_ints) == list(range(5))
 
-  def test_sorts_big_list(self):
-    big_thing = list(range(10000))
-    random.seed(0)
-    random.shuffle(big_thing)
-    assert merge_sort(big_thing) == list(range(10000))
+  def test_sorts_list_of_length_10000(self):
+    list_of_ints = make_random_list_of_ints(n=10000)
+    assert merge_sort(list_of_ints) == list(range(10000))
 
   def test_is_stable(self):
     pass

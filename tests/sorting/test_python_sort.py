@@ -1,9 +1,7 @@
-import random
+from tests.sorting.base import make_random_list_of_ints
 
 
 class TestPythonSort:
-  def test_python_sorts_big_list(self):
-    big_thing = list(range(10000))
-    random.seed(0)
-    random.shuffle(big_thing)
-    assert list(sorted(big_thing)) == list(range(10000))
+  def test_sorts_list_of_length_10000(self):
+    list_of_ints = make_random_list_of_ints(n=10000)
+    assert list(sorted(list_of_ints)) == list(range(10000))
